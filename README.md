@@ -112,9 +112,9 @@ angular-messaging-app/
 
 ```mermaid
 sequenceDiagram
-  participant A 
-  participant B 
-  participant C 
+  participant A as Angular Client
+  participant B as Node Server
+  participant C as Receiver Client (maybe offline)
 
   A->>B: Connect WebSocket (with JWT)
   B->>A: JWT Verified → Connection Established
