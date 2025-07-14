@@ -59,16 +59,30 @@ No databases. No storage persistence. Pure in-memory simulation of a messaging s
 
 ### 📦 Node.js Backend
 
-node-backend/
-├── src/
-│ ├── config/ # App constants like JWT secret, port
-│ ├── controllers/ # Auth controller
-│ ├── helpers/ # JWT token helpers
-│ ├── models/ # User & Message models
-│ ├── routes/ # Auth route definitions
-│ ├── services/ # Core user/message logic
-│ ├── socket/ # Socket.IO handlers
-│ └── server.js # Entry point
+project-root:
+
+  node-backend:
+    src:
+      config:
+        - constants.js
+      controllers:
+        - auth.controller.js
+      routes:
+        - auth.routes.js
+      services:
+        - user.service.js
+        - message.service.js
+      helpers:
+        - jwt.js
+      models:
+        - user.model.js
+        - message.model.js
+      socket:
+        - websocket.js
+      - server.js
+    - package.json
+    - .env
+    - README.md
 
 
 ---
@@ -76,15 +90,26 @@ node-backend/
 ### 💻 Angular Frontend
 
 angular-messaging-app/
-├── app/
-│ ├── components/chat/ # Chat component
-│ ├── services/ # Auth & WebSocket services
-│ ├── models/ # Shared Message model
-│ └── app.module.ts
-├── assets/
-└── main.ts
-
-
+  angular-messaging-app:
+    src:
+      app:
+        components:
+          chat:
+            - chat.component.ts
+            - chat.component.html
+            - chat.component.css
+        services:
+          - auth.service.ts
+          - websocket.service.ts
+        models:
+          - message.ts
+        - app.module.ts
+        - app.component.html
+      - main.ts
+    - angular.json
+    - package.json
+    - tsconfig.json
+    
 ---
 
 ## 🔐 Authentication Flow
