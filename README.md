@@ -1,4 +1,4 @@
-# MessagingServiceApp
+  # MessagingServiceApp
 
 # 🔔 Real-Time Messaging Service — Node.js + Angular
 
@@ -58,9 +58,9 @@ No databases. No storage persistence. Pure in-memory simulation of a messaging s
 ## 📁 Project Structure
 
 ### 📦 Node.js Backend
-
-project-root:
-
+<details>
+  <summary>
+    <code>
   node-backend:
     src:
       config:
@@ -82,15 +82,16 @@ project-root:
       - server.js
     - package.json
     - .env
-    - README.md
-
-
----
-
+        </code>
+    </summary>
+</details>
+    
 ### 💻 Angular Frontend
 
-angular-messaging-app/
-  angular-messaging-app:
+<details>
+  <summary>
+    <code>
+        angular-messaging-app:
     src:
       app:
         components:
@@ -109,6 +110,9 @@ angular-messaging-app/
     - angular.json
     - package.json
     - tsconfig.json
+    </code>
+    </summary>
+</details>
     
 ---
 
